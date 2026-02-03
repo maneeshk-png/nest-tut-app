@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
     "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "resolvePackageJsonExports": true,
+    "moduleResolution": "nodenext", //I am using modern Node.js with both ES modules & CommonJS support.
+    "resolvePackageJsonExports": true, //Allows TypeScript to respect "exports" field in package.json of libraries.
     "esModuleInterop": true,
     "isolatedModules": true,
     "declaration": true,
     "removeComments": true,
-    "emitDecoratorMetadata": true,
+    "emitDecoratorMetadata": true,  //decorators
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2023",
-    "sourceMap": true,
-    "outDir": "./dist",
+    "target": "ES2023",  //TS converts your code into modern JS (Node 18+ friendly).
+    "sourceMap": true,   //Lets you debug TypeScript files, not compiled JS.
+    "outDir": "./dist",  //where should code save
     "baseUrl": "./",
-    "incremental": true,
+    "incremental": true,  // faster build and typescript remembr previous compilation
     "skipLibCheck": true,
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
