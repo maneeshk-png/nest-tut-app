@@ -1,4 +1,10 @@
+//what goes to production
 {
   "extends": "./tsconfig.json",
   "exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
 }
+
+
+//when executing npm run build
+//nest executes only tsc -p tsconfig.build.json
+//so ts uses build , not tsconfig
