@@ -2,6 +2,7 @@ import { Body, Controller, Delete, Get, Param, ParseIntPipe, Patch, Post, Query,
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+import { Role } from './entities/user.entity';
 
 
 
@@ -13,7 +14,7 @@ export class UsersController {
 
     //Get All Users
   @Get()
-  findAll(@Query('role')role?:'INTERN' |'ENGINEER'|'ADMIN'){
+  findAll(@Query('role')role?:Role){
     return this.userService.findAll(role);
   }
 
