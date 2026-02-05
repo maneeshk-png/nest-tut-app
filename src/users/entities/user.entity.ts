@@ -22,3 +22,4 @@ export class User {
   @Column({nullable: true })
   password: string; // hashed password
 }
+
